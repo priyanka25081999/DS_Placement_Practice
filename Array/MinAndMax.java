@@ -3,7 +3,7 @@
 import java.io.*;
 import java.util.*;
 
-class Main {
+class MinAndMax {
 	public static void main (String[] args) {
 		int []arr = new int[]{31,32,13,54,75};
 

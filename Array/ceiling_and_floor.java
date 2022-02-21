@@ -10,6 +10,9 @@ Input : arr[] = 2, 3, 5, 9, 14, 16, 18, target = 5
 Output [array index]: Ceiling = 2 and floor = 2 
 */
 
+// Time complexity : O(logn)
+// where n = number of elements in an array [Binary serach approrach]
+
 public class Main
 {
     public static int ceiling(int arr[], int target)

@@ -14,6 +14,10 @@ public class Main
 {
     public static int ceiling(int arr[], int target)
     {
+	// if target is greater than greatest element in the array, then return -1
+        if (target > arr[arr.length-1])
+           return -1;
+	    
         int start = 0;
         int end = arr.length-1;
         
@@ -33,9 +37,11 @@ public class Main
     
     public static int floor(int arr[], int target)
     {
+	// if target is smaller than smallest element in the array, then return -1
+        // it will by default return -1 as start will go before index 0
+        
         int start = 0;
         int end = arr.length-1;
-        
         
         while(start<=end)
         {

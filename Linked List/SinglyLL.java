@@ -54,6 +54,44 @@ class SinglyLL
             n=n.next;
         }
     }
+    
+    public void insert_at_position(int data, int index)
+    {
+        if(index == 0)
+        {
+            Node node = new Node(data);
+            node.next = head;
+            head=node;
+        }
+        else
+        {
+            n=head;
+            for (int i=1; i<index; i++)
+            {
+                n=n.next;
+            }
+            
+            Node node = new Node(data);
+            node.next = n.next;
+            n.next = node;
+        }
+    }
+    
+    public void insert_recursion(int data, int index)
+    {
+        head = insert_rec(data, index, head);
+    }
+    
+    private Node insert_rec(int data, int index, Node node)
+    {
+        if (index == 0)
+        {
+            Node new_node = new Node(data);
+            return new_node;
+        }
+        node.next = insert_rec(data, index--, node.next);
+        return node;
+    }
 }
 
 public class Main
@@ -64,6 +102,14 @@ public class Main
 		s.insert(10);
 		s.insert(7);
 		s.insert(8);
+		s.print();
+		
+		System.out.println("Insert at specific position: ");
+		s.insert_at_position(9,1);
+		s.print();
+		
+		System.out.println("Recursion : Insert at specific position: ");
+		s.insert_at_position(18,3);
 		s.print();
 	}
 }

@@ -53,6 +53,8 @@ class Solution {
 /*
 
 Let's optimize
+Priority Queue - MaxHeap approach
+
 As, we want highest value at the first & lowest value in the last. So, we gonna use maxHeap
 Let's create our maxHeap and use the same example i.e. [2,7,4,1,8,1] to fill our heap.
 Now, let's fill our heap.
@@ -153,6 +155,10 @@ Now put that 1 into our heap & again calculate the result of stone x & y
 --------
 maxHeap
 So, the loop ends when we only have 1 element left in our heap
+
+ANALYSIS :-
+Time Complexity :- BigO(NlogN)
+Space Complexity :- BigO(1)
 
 class Solution {
     public int lastStoneWeight(int[] stones) {

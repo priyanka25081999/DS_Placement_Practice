@@ -1,5 +1,5 @@
 // Array : Find Peak element
-// Binary Search approach
+// Binary Search approach - O(logn)
 // https://leetcode.com/problems/find-peak-element/
 
 class Solution {

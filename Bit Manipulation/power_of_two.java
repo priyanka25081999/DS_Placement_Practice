@@ -1,5 +1,5 @@
 // Bit Manipulation : Power of Two
-// https://leetcode.com/problems/power-of-two/
+// Leetcode : https://leetcode.com/problems/power-of-two/
 // Recursive approach
 
 class Solution {

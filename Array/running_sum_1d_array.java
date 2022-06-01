@@ -16,3 +16,18 @@ class Solution {
         return ans;
     }
 }
+
+/* Another approach:
+
+class Solution {
+    public int[] runningSum(int[] nums) { 
+      int temp = 0;
+        
+      for(int i=0; i<arr.length; i++) {
+         temp += nums[i];
+         nums[i] = temp;
+      }
+      return nums;
+    }
+}
+*/

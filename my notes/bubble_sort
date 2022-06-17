@@ -38,8 +38,6 @@ public class Main
 }
 
 // Optimized way - boolean flag
-
-
 public class Main
 {
     public static void swap(int arr[], int i, int j)

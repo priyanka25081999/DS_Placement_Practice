@@ -1,0 +1,77 @@
+// Bubble sort
+// Time complexity : Best - O(n), worst - O(n^2)
+// Bubble sort uses only a constant amount of extra space for variables like flag, i, n. 
+// Hence, the space complexity of bubble sort is O(1). 
+// It is an in-place sorting algorithm i.e. it modifies elements of the original array to sort the given array.
+// Bubble sort is a stable algorithm. 
+// A sorting algorithm is said to be stable if two objects with equal keys appear in the same order 
+// in sorted output as they appear in the input array to be sorted.
+// Check video for more information with an example - https://www.youtube.com/watch?v=bBQkErahU9c&list=PLUcsbZa0qzu3yNzzAxgvSgRobdUUJvz7p&index=17
+
+public class Main
+{
+    public static void swap(int arr[], int i, int j)
+    {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    
+	public static void main(String[] args) {
+		int arr[] = {4, 3, 7, 1, 5};
+		int n = arr.length;
+		
+		// bubble shot
+		for(int i=0; i<n-1; i++)
+		{
+		    for(int j=0; j<n-i-1; j++)
+		    {
+		        if(arr[j+1] < arr[j])
+		           swap(arr, j+1, j);
+		    }
+		}
+		
+		// print the sorted array
+		for(int i : arr)
+		   System.out.println(i);
+	}
+}
+
+// Optimized way - boolean flag
+
+
+public class Main
+{
+    public static void swap(int arr[], int i, int j)
+    {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    
+	public static void main(String[] args) {
+		int arr[] = {4, 3, 7, 1, 5};
+		int n = arr.length;
+		
+		// bubble shot
+		for(int i=0; i<n-1; i++)
+		{
+		    boolean swapped = false;
+		    for(int j=0; j<n-i-1; j++)
+		    {
+		        if(arr[j+1] < arr[j]) {
+		           swapped = true;
+		           swap(arr, j+1, j);
+		        }
+		    }
+		    
+		    // if not swapped that means array is sorted already
+		    if(!swapped)
+		      break;
+		}
+		
+		// print the sorted array
+		for(int i : arr)
+		   System.out.println(i);
+	}
+}

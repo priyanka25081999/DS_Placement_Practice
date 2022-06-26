@@ -14,3 +14,24 @@ class Solution {
     }
 }
 
+// Second approach - Priority Queue
+// Total time complexity - O(nlogn)
+/*
+class Solution {
+    public int findKthLargest(int[] nums, int k) {
+        // create a priority queue
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        
+        // add array elements into priority queue
+        for(int i : nums)
+            pq.add(i);
+        
+        // Remove an element if queue size is greater than k
+        while(pq.size() > k)
+            pq.remove();
+        
+        // remove the kth largest element.
+        return pq.remove();
+    }
+}
+*/

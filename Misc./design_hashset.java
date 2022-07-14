@@ -1,5 +1,5 @@
 // HashSet : Design Hashset
-// https://leetcode.com/problems/design-hashset/
+// Leetcode : https://leetcode.com/problems/design-hashset/
 
 class MyHashSet {
 

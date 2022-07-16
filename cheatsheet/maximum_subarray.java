@@ -18,3 +18,4 @@ class Solution {
         return current_max;
     }
 }
+

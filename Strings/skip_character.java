@@ -1,4 +1,4 @@
-// Skip the specific character from string
+// String : Skip the specific character from string
 
 public class Main
 {

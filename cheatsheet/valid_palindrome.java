@@ -1,6 +1,6 @@
 // String : Valid palindrome
 // Leetcode : https://leetcode.com/problems/valid-palindrome/
-// Two Pointers approach
+// Two Pointers approach - O(n)
 
 class Solution {
     public boolean isPalindrome(String s) {

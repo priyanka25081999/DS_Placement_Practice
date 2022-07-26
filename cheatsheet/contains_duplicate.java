@@ -15,6 +15,24 @@ class Solution {
     }
 }
 
+/* 
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        // first approach
+        // sort the array and compare the elements with each other
+        // if we found anyone duplicate then return true, else false
+        
+        Arrays.sort(nums);
+        for (int i=0; i<nums.length-1; i++)
+        {
+            if(nums[i] == nums[i+1])
+                return true;
+        }
+        return false;
+    }
+}
+*/
+
 // Approach-2 : HashMap
 // Time complexity - O(n) (traverse the array once)
 class Solution {

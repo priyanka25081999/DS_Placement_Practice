@@ -37,4 +37,47 @@ class Solution {
 // But, due to this limitation ("You must write an algorithm that runs in O(n) time and without using the division operation.") given in the problem
 // we will not use division operator
 
+// Approach 3 - Prefix sum
+// By taking arrays for prefix and postfix
+// One drawback - taking more memory i.e O(n) extra memory is required to store prefix and postfix
 
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        int pre[] = new int[nums.length];
+        int post[] = new int[nums.length];
+        int ans[] = new int[nums.length];
+        
+        int pre_product = 1, post_product = 1;
+        
+        // calculate prefix product
+        for(int i=0; i<nums.length; i++)
+        {
+            pre_product = pre_product * nums[i];
+            pre[i] = pre_product;
+        }
+        
+        // calculate postfix product
+        for(int i=nums.length-1; i>=0; i--)
+        {
+            post_product = post_product * nums[i];
+            post[i] = post_product;
+        }
+        
+        // calcluate the final product
+        for(int i=0; i<nums.length; i++)
+        {
+            // if it is a first element, then it doesn't have prefix
+            // hence take only postfix
+            if(i==0)
+                ans[i] = post[i+1];
+            // if it is the last element, then it doesn't have postfix
+            // hence take only prefix
+            else if(i == nums.length-1)
+                ans[i] = pre[i-1];
+            else
+                ans[i] = pre[i-1] * post[i+1];
+        }
+        
+        return ans;
+    }
+}

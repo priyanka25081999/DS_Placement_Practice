@@ -1,5 +1,6 @@
 // Array : Product of array except self
 // Leetcode : https://leetcode.com/problems/product-of-array-except-self/
+// check notebook for more information
 // Approach 1 : Brute force approach (Getting time limit exceeded)
 
 class Solution {

@@ -40,6 +40,7 @@ class Solution {
 // Approach 3 - Prefix sum
 // By taking arrays for prefix and postfix
 // One drawback - taking more memory i.e O(n) extra memory is required to store prefix and postfix
+// Link for more description - https://www.youtube.com/watch?v=bNvIQI2wAjk
 
 class Solution {
     public int[] productExceptSelf(int[] nums) {
@@ -76,6 +77,35 @@ class Solution {
                 ans[i] = pre[i-1];
             else
                 ans[i] = pre[i-1] * post[i+1];
+        }
+        
+        return ans;
+    }
+}
+
+// Approach-4 : Prefix sum
+// Using single output array - O(n) time complexity overall, no extra memory (for prefix and postfix arrays - like approach3)
+// Link for more description - https://www.youtube.com/watch?v=bNvIQI2wAjk
+
+class Solution {
+    public int[] productExceptSelf(int[] nums) {
+        // Create an answer array
+        int ans[] = new int[nums.length];
+        
+        // traverse from left to right first to get prefix
+        int prefix_product = 1;
+        for(int i=0; i<nums.length; i++)
+        {
+            ans[i] = prefix_product;
+            prefix_product = prefix_product * nums[i];
+        }
+        
+        // traverse from right to left to get postfix 
+        int postfix_product = 1;
+        for(int i=nums.length-1; i>=0; i--)
+        {
+            ans[i] = postfix_product * ans[i];
+            postfix_product = postfix_product * nums[i];
         }
         
         return ans;

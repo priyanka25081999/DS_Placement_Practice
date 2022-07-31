@@ -1,6 +1,6 @@
 // Linked List Cycle
 // https://leetcode.com/problems/linked-list-cycle/
-
+// Approach 1 - Two pointers (fast and slow)
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -21,6 +21,7 @@ public class Solution {
             fast = fast.next.next;
             slow = slow.next;
             
+            // cycle exists
             if(slow == fast)
                 return true;
         }

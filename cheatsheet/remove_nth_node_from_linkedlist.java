@@ -1,5 +1,6 @@
 // Linked List : Remove Nth Node From End of List
 // Leetcode : https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+// Two pointer approach : linear time - O(n)
 
 /**
  * Definition for singly-linked list.
@@ -22,6 +23,8 @@ class Solution {
         ListNode fast = start;
         ListNode slow = start;
         
+        // move till nth element
+        // e.g [1,2,3,4,5] n=2, then fast.val after below loop would be 2.
         for(int i=0; i<n; i++)
         {
             fast = fast.next;

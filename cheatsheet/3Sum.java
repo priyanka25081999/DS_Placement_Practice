@@ -38,3 +38,33 @@ class Solution {
 }
 
 // Right now getting time limit exceeded exception
+// Approach-2 : Using HashSet (Brute force method - Getting Time Limit Exceeded)
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        Set<List<Integer>> final_list = new HashSet<>();
+        
+        for(int i=0; i<nums.length; i++)
+        {
+            for(int j=i+1; j<nums.length-1; j++)
+            {
+                for(int k=j+1; k<nums.length; k++)
+                {
+                    if(nums[i]+nums[j]+nums[k] == 0) {
+                        List<Integer> int_list = new ArrayList<>();
+
+                        int_list.add(nums[i]);
+                        int_list.add(nums[j]);
+                        int_list.add(nums[k]);
+                        Collections.sort(int_list);
+                        final_list.add(int_list);
+                    }
+                }
+            }
+        }
+        
+        return new ArrayList<>(final_list);
+    }
+}
+
+
+

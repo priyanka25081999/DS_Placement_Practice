@@ -66,5 +66,37 @@ class Solution {
     }
 }
 
-
+// Approach -3 : Two pointers and Sorting
+// Time complexity : O(n^2) -> one for sorting (O(nlogn)) and one for finding triplet (O(n^2)) 
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        // First, sort the array
+        // Second, use one for loop to find the 1st element
+        // Third, use two pointers method to find remaining 2 elements to make triplet
+        // Finally, compare the sum
+        
+        Set<List<Integer>> internal_list = new HashSet<>();
+        Arrays.sort(nums); // to ignore duplicates
+        
+        for(int i=0; i<nums.length-2; i++)
+        {
+            int j=i+1;
+            int k = nums.length-1;
+            
+            while(j < k)
+            {
+                int sum = nums[i] + nums[j] + nums[k];
+                
+                if(sum == 0)
+                  internal_list.add(Arrays.asList(nums[i], nums[j++], nums[k--]));
+                else if(sum < 0)
+                  j++;
+                else if(sum > 0)
+                  k--;
+            }
+        }
+        
+        return new ArrayList<>(internal_list);
+    }
+}
 

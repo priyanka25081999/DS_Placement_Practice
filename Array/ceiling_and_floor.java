@@ -102,3 +102,32 @@ class Solution{
     
 }
 
+// second approach : finding ceil of a number - binary search
+
+class Solution{
+    
+    // Function to find floor of x
+    // arr: input array
+    // n is the size of array
+    static int findFloor(long arr[], int n, long x)
+    {
+        int ceil = -1;
+        int start = 0, end = n-1;
+        
+        while(start <= end)
+        {
+           int mid = start + (end-start)/2;
+           
+           if(arr[mid]>=x)  // can be a candidate for ceil of x
+           {
+               ceil = mid;
+               end = mid-1;  // check it's left subarray
+           }
+           else if(x > arr[mid])
+              start = mid+1;
+        }
+        
+        return ceil;
+    }
+    
+}

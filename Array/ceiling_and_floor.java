@@ -72,3 +72,33 @@ public class Main
 	    System.out.println("Floor of a " + target + " is = " + ans_floor);
 	}
 }
+
+// second approach : finding floor of a number - binary search
+class Solution{
+    
+    // Function to find floor of x
+    // arr: input array
+    // n is the size of array
+    static int findFloor(long arr[], int n, long x)
+    {
+        int floor = -1;
+        int start = 0, end = n-1;
+        
+        while(start <= end)
+        {
+           int mid = start + (end-start)/2;
+           
+           if(x >= arr[mid])
+           {
+               floor = mid;
+               start = mid+1;
+           }
+           else if(x < arr[mid])
+              end = mid-1;
+        }
+        
+        return floor;
+    }
+    
+}
+

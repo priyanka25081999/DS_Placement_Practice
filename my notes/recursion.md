@@ -36,6 +36,7 @@ Space complexity : At max 3 recursion calls will be waiting in a stack space O(n
 **Printing subsequences whose sum is equal to 'k'**
 
 Sample code: (In actual code, we need to pass, target-sum and the current-sum to the function)
+
 list1 - [] = an empty list contains subsequences whose sum is equal to 'k'
 
       func(index, list1, target_sum)

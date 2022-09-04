@@ -63,4 +63,5 @@ list1 - [] = an empty list contains subsequences whose sum is equal to 'k'
             // call the next index without taking current
             func(index+1, list1, sum);
        }
-       
+
+--------------------------------------------------------------------------------------------------------------------------

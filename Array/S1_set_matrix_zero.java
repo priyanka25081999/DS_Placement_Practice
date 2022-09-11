@@ -4,6 +4,7 @@
 // Space Complexity:O(1)
 // This solution will not work if array contains non-negative elements
 // Striver sheet - https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+// Leetcode - https://leetcode.com/problems/set-matrix-zeroes/
 
 class Solution {
     public void setZeroes(int[][] matrix) {
@@ -106,4 +107,9 @@ class Solution {
     }
 }
 
+// Approach 3 - to reduce the space complexity and have the optimize solution
+// instead of making 2 dummy arrays for row and column, we can re-use 1st column and 1st row of the given matrix
+// this way our new space complexity becomes - O(1) and we need to traverse two times in a matrix hence
+// time complexity becomes - O(2*(N*M))
+// Code will be available in above link
 

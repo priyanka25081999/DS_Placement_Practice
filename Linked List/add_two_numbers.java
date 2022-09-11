@@ -4,6 +4,7 @@
 // the algorithm above iterates at most max(m,n) times.
 // Space Complexity : O(max(m,n)). The length of the new list is at most max(m,n)+1.
 // Leetcode : https://leetcode.com/problems/add-two-numbers/  (Striver)
+// CoreStudio link : https://www.codingninjas.com/codestudio/problems/add-two-numbers-as-linked-lists_1170520?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website&leftPanelTab=0
 
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

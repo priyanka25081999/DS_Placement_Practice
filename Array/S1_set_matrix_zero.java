@@ -1,0 +1,70 @@
+// Array : Set Matrix Zero (Assuming array contains non-negative elements)
+// Brute force approach
+// Time Complexity:O((N*M)*(N + M)). O(N*M) for traversing through each element and (N+M)for traversing to row and column of elements having value 0.
+// Space Complexity:O(1)
+// This solution will not work if array contains non-negative elements
+// Striver sheet - https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/
+
+class Solution {
+    public void setZeroes(int[][] matrix) {
+        for(int i=0; i<matrix.length; i++)
+        {
+            for(int j=0; j<matrix[0].length; j++)
+            {
+                if(matrix[i][j] == 0)
+                {
+                    // replace i-1 rows values with -1
+                    // The reason for not changing other elements to 0, but -1, 
+                    // because that might affect other columns and rows.
+                    int index = i-1;
+                    while(index >= 0)
+                    {
+                        if(matrix[index][j]!=0)
+                            matrix[index][j] = -1;
+                        
+                        index--;
+                    }
+                    
+                    // replace i+1 rows with value -1
+                    index = i+1;
+                    while(index < matrix.length)
+                    {
+                        if(matrix[index][j] != 0)
+                            matrix[index][j] = -1;
+                        
+                        index++;
+                    }
+                    
+                    // replace j-1 columns with value -1
+                    index = j-1;
+                    while(index >= 0)
+                    {
+                        if(matrix[i][index] != 0)
+                            matrix[i][index] = -1;
+                        
+                        index--;
+                    }
+                    
+                    // replace j+1 columns with value -1
+                    index = j+1;
+                    while(index < matrix[0].length)
+                    {
+                        if(matrix[i][index] != 0)
+                            matrix[i][index] = -1;
+                        
+                        index++;
+                    }
+                }               
+            }
+        }
+    
+        for(int i=0; i<matrix.length; i++)
+        {
+            for(int j=0; j<matrix[0].length; j++)
+            {
+                if(matrix[i][j] <= 0)
+                    matrix[i][j] = 0;
+            }
+        }
+    }
+}

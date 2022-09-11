@@ -1,5 +1,8 @@
 // Reverse the singly linked list
-// https://leetcode.com/problems/reverse-linked-list/
+// Leetcode : https://leetcode.com/problems/reverse-linked-list/
+// Iterative approach
+// Time complexity : O(N), Since we are iterating only once through the list and achieving reversed list. 
+// Where N is the number of nodes present in the list.
 
 /**
  * Definition for singly-linked list.

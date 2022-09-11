@@ -39,6 +39,33 @@ class Solution {
     }
 }
 
+// Another approach - find mid
+/*
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        int cnt = 0;
+        ListNode temp = head;
+        
+        while(temp!=null)
+        {
+            cnt++;
+            temp = temp.next;
+        }
+        
+        temp=head;
+        int mid = cnt/2;
+        
+        while(temp!=null && mid>0)
+        {
+            mid--;
+            temp = temp.next;
+        }
+        
+        return temp;
+    }
+}
+*/
+
 /* Second approach : Two pointers
 
 class Solution {

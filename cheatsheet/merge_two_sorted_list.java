@@ -1,5 +1,8 @@
 // Linked list : Merge two sorted list
 // Leetcode : https://leetcode.com/problems/merge-two-sorted-lists/
+// Time complexity : O(N+M) Let N be the number of nodes in list l1 and M be the number of nodes in list l2. 
+// We have to iterate through both lists. So, the total time complexity is O(N+M).
+// Space complexity : O(N+M) We are creating another linked list that contains the (N+M) number of nodes in the list. So, space complexity is O(N+M).
 
 /**
  * Definition for singly-linked list.

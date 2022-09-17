@@ -1,5 +1,7 @@
 // Matrix : Search an element in a 2D matrix
 // https://leetcode.com/problems/search-a-2d-matrix/
+// Time complexity : O(N*M) 
+// Space complexity : O(1)
 
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {

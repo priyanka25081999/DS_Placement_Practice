@@ -27,3 +27,37 @@ class Solution {
         return false;
     }
 }
+
+// Approach-2 : As matrix is sorted, we can apply binary search
+// Time complexity : O(log(m*n))
+// Space complexity : O(1)
+
+class Solution {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        // let's try binary search
+        // base case
+        if(matrix.length == 0)
+            return false;
+        
+        int low = 0;
+        int row = matrix.length;
+        int col = matrix[0].length;
+        int high = (row*col)-1;  
+        // Example: row = 3, col = 4. high = (3*4)-1 = 11
+        // our range becomes 0-11
+        
+        while(low<=high)
+        {
+            int mid = (low+(high-low)/2);
+            
+            if(matrix[mid/col][mid%col] == target)
+                return true;
+            else if(matrix[mid/col][mid%col] < target)
+                low = mid+1;
+            else
+                high = mid-1;
+        }
+        
+        return false;
+    }
+}

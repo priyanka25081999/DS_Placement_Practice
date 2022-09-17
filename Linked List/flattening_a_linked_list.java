@@ -3,6 +3,15 @@
 // Time complexity : O(N) - where N is the total number of nodes present, we are visiting all the nodes present in the given list.
 // Space complexity : O(1) - we are not creating any new nodes or using any other data structure.
 
+/*
+
+a. Create a dummy node. Point two pointers, i.e, temp and res on dummy node. 
+   res is to keep track of dummy node and temp pointer is to move ahead as we build the flattened list.
+b. We iterate through the two chosen. Move head from any of the chosen lists ahead whose current pointed node is smaller. 
+c. Return the new flattened list found.
+
+*/
+
 class GfG
 {
     public Node mergetwolists(Node list1, Node list2)

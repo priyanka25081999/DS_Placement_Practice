@@ -33,3 +33,35 @@ class Solution{
         return res;
     }
 }
+
+// From coding ninja - https://www.codingninjas.com/codestudio/problems/subset-sum_3843086?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website&leftPanelTab=0
+
+import java.util.* ;
+import java.io.*; 
+public class Solution {
+    
+    public static void func(int index, int sum, int num[], int N, ArrayList<Integer> list1)
+    {
+        if(index == N)
+        {
+            list1.add(sum);
+            return;
+        }
+        
+        // pick this index
+        func(index+1, sum+num[index], num, N, list1);
+        // do not pick this index
+        func(index+1, sum, num, N, list1);
+    }
+    
+    public static ArrayList<Integer> subsetSum(int num[]) {
+        // Write your code here..
+        ArrayList<Integer> res = new ArrayList<Integer>();
+        func(0, 0, num, num.length, res);
+        
+        // sort the result list
+        Collections.sort(res);
+        return res;
+    }
+
+}

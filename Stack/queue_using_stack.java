@@ -1,5 +1,6 @@
 // Stack : Implement a first in first out (FIFO) queue using only two stacks.
 // https://leetcode.com/problems/implement-queue-using-stacks/
+// Time complexity: Push operation - O(1) and Pop operation - O(N)
 
 class MyQueue {
     

@@ -26,3 +26,29 @@ class Solution {
         return cnt+left+right;
     }
 }
+
+// Some optimization
+class Solution {
+    public int goodNodes(TreeNode root) {
+        return func_rec(root, Integer.MIN_VALUE);
+    }
+    
+    public int func_rec(TreeNode child, int max)
+    {
+        // base case for child nodes
+        if(child==null)
+          return 0;
+
+        int cnt=0;
+        if(child.val >= max)
+           cnt++;
+
+        // traverse left subtree
+        cnt += func_rec(child.left, Math.max(max, child.val));
+
+        // traverse right subtree
+        cnt += func_rec(child.right, Math.max(max, child.val));
+
+        return cnt;
+    }
+}

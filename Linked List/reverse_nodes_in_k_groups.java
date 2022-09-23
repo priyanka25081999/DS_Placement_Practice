@@ -6,7 +6,7 @@
 
 // Approach:
 // Find the length of linked list
-// Ierate through the linked list until the length of list to be processed is greater than and equal to given k.
+// Iterate through the linked list until the length of list to be processed is greater than and equal to given k.
 // For each iteration, reverse the nodes in k group
 
 class Solution {

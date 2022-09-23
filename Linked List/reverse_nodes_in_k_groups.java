@@ -45,7 +45,7 @@ class Solution {
             cnt++;
         }
         
-        // again move ahead to another group as temp is not reached to the end
+        // Again move ahead to another group as temp is not reached to the end
         if(temp!=null)
         {
             head.next = reverse(temp, k, len-k);

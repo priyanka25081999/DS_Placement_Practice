@@ -11,6 +11,7 @@ class Solution {
         if(intervals==null || intervals.length==0)
             return res.toArray(new int[0][]);
         
+        // sort the intervals
         Arrays.sort(intervals, (a,b)->a[0]-b[0]);
         
         int start=intervals[0][0];

@@ -1,4 +1,5 @@
 // Tree : Preorder Traversal
+// Time complexity : O(N)
 // https://leetcode.com/problems/binary-tree-preorder-traversal/
 
 class Solution {

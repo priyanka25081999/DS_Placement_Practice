@@ -2,21 +2,6 @@
 // https://leetcode.com/problems/binary-tree-level-order-traversal/
 // O(n) time complexity, where n is number of nodes in binary tree
 
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
- */
 class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
         
@@ -48,7 +33,9 @@ class Solution {
                 list1.add(current.val);
             }
             
+            // add this list to final list
             final_list.add(list1);
+            // the move to next level
         }
         return final_list;
     }

@@ -1,6 +1,8 @@
 // Trie : Implement trie (Prefix tree)
 // Leetcode : https://leetcode.com/problems/implement-trie-prefix-tree/
 // Time complexity : O(M) for searching
+// The complexity of creating a trie is O(W*L) , where W is the number of words
+// And L is an average length of the word: you need to perform L lookups on the average for each of the W words in the set.
 // HashMap approach
 
 class Trie {

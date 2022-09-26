@@ -20,12 +20,25 @@ class Solution {
     }
 }
 
-
-
-
+// Space optimization of above solution
+// Time complexity : O(N) - We are running a simple iterative loop
+// Space complexity : O(1) - We are not using any extra space.
+class Solution {
+    public int climbStairs(int n) {
+        int one=1, two=1;
+        
+        for(int i=2; i<=n; i++)
+        {
+            int temp = one;
+            one = one+two;
+            two = temp;
+        }
+        
+        return one;
+    }
+}
 
 // Stack approach
-
 class Solution {
     public int climbStairs(int n) {
         // Create a stack

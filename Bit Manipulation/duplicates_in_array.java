@@ -26,3 +26,22 @@ class Solution {
         return list1;
     }
 }
+
+// Second approach
+// Hashset using extra space, which is not allowed😁
+class Solution {
+    public List<Integer> findDuplicates(int[] nums) {
+        HashSet<Integer> hset = new HashSet<>();
+        List<Integer> list1 = new ArrayList<>();
+        
+        for(int i=0; i<nums.length; i++)
+        {
+            if(hset.contains(nums[i]))
+                list1.add(nums[i]);
+            else
+                hset.add(nums[i]);
+        }
+                
+        return list1;
+    }
+}

@@ -1,7 +1,7 @@
 // DP : Word Break
 // Leetcode : https://leetcode.com/problems/word-break/
 // Approach : Memorization (DP) + HashMap + Trie data structure (Trie reference - https://github.com/priyanka25081999/DS_Placement_Practice/blob/ca3e31b5bdff73efe6cde6b51e3a97c615c61c54/cheatsheet/implement_trie.java)
-// Time complexity : O(M) for searching
+// Time complexity : O(M) for searching in Trie
 // The complexity of creating a trie is O(W*L) , where W is the number of words
 // And L is an average length of the word: you need to perform L lookups on the average for each of the W words in the set.
 

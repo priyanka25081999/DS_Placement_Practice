@@ -28,7 +28,7 @@ class Solution {
     }
 }
 
-// DP : Memorization approach
+// DP : Memoization approach
 // Time complexity : O(N)
 // Space complexity : O(N)+O(N)
 

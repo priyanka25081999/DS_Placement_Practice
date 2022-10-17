@@ -47,7 +47,7 @@ class Solution {
     }
 }
 
-// Approach-2
+// Approach-2, using stack
 // Time complexity : O(N)
 // Space complexity : O(N)
 

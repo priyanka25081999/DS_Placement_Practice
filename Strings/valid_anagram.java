@@ -24,3 +24,32 @@ class Solution {
             return false;
     }
 }
+
+// Approach-2, using one hashmap
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        // base case
+        if(s.length()!=t.length())
+            return false;
+        
+        HashMap<Character, Integer> hmap1 = new HashMap<>();
+        
+        for(int i=0; i<s.length(); i++)
+            hmap1.put(s.charAt(i), hmap1.getOrDefault(s.charAt(i),0)+1);
+        
+        for(int i=0; i<t.length(); i++)
+        {
+            if(hmap1.get(t.charAt(i))==null || hmap1.get(t.charAt(i))==0)
+                return false;
+            
+            hmap1.put(t.charAt(i), hmap1.getOrDefault(t.charAt(i),0)-1);
+        }
+        
+        for(char ch : hmap1.keySet())
+        {
+            if(hmap1.get(ch) > 0)
+                return false;
+        }
+        return true;
+    }
+}

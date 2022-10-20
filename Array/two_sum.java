@@ -1,5 +1,7 @@
 // Array : Two sum
 // https://leetcode.com/problems/two-sum/
+// Time complexity : O(N^2)
+// Space complexity : O(1)
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {

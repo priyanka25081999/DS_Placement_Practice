@@ -1,5 +1,6 @@
 // Array - Contains Duplicate
 // https://leetcode.com/problems/contains-duplicate/
+// Approach-1 : Sort the array and check duplicates
 // Time Complexity:  O(N*logN), Sorting takes N*logN. Times where N is the length of the array
 // Space Complexity: O(1), Since we are not using any extra space. If we are not counting extra space taken by sorting.
 

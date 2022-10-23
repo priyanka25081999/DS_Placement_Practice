@@ -1,6 +1,8 @@
 // Array : Find the maximum amount of water a container can store
 // Two pointer approach
-// https://leetcode.com/problems/container-with-most-water/
+// Time complexity : O(N)
+// Space complexity : O(1) - not using any extra space
+// Leetcode : https://leetcode.com/problems/container-with-most-water/
 
 class Solution {
     public int maxArea(int[] height) {

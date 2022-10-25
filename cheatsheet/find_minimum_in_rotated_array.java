@@ -9,7 +9,9 @@ class Solution {
     }
 }
 
-// Approach-2 : Binary Search - O(logn)
+// Approach-2 : Binary Search 
+// Time complexity - O(logn)
+// Space complexity - O(1)
 // check the example on find_minimum_in_rotated_array.png - https://github.com/priyanka25081999/DS_Placement_Practice/blob/main/Array/find_minimum_in_rotated_array.PNG
 /*
 class Solution {

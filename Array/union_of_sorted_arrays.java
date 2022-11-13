@@ -32,3 +32,51 @@ class Solution
         return arr;
     }
 }
+
+// Approach-2 : Two pointers approach
+// Very good explaination is here - https://takeuforward.org/data-structure/union-of-two-sorted-arrays/
+// Time Complexity: O(m+n), Because at max i runs for n times and j runs for m times, When there are no common elements in 
+// arr1 and arr2 and all elements in arr1, arr2 are distinct. 
+// Space Complexity : O(m+n) {If Space of Union ArrayList is considered} 
+// Space Complexity : O(1) {If Space of union ArrayList is not considered}
+
+//arr1,arr2 : the arrays
+// n, m: size of arrays
+class Solution
+{
+    //Function to return a list containing the union of the two arrays.
+    public static ArrayList<Integer> findUnion(int arr1[], int arr2[], int n, int m)
+    {
+        // add your code here
+        // Two pointers approach
+        int i=0, j=0;
+        ArrayList<Integer> union = new ArrayList<>();
+        
+        while(i<n && j<m) {
+            if(arr1[i] <= arr2[j]) {
+                if(union.size()==0 || union.get(union.size()-1)!=arr1[i])
+                    union.add(arr1[i]);
+                i++;
+            } else {
+                if(union.size()==0 || union.get(union.size()-1)!=arr2[j])
+                    union.add(arr2[j]);
+                j++;
+            }
+        }
+        
+        while(i<n) {
+            if(union.get(union.size()-1)!=arr1[i])
+                union.add(arr1[i]);
+            i++;
+        }
+        
+        while(j<m) {
+            if(union.get(union.size()-1)!=arr2[j])
+                union.add(arr2[j]);
+            j++;
+        }
+        
+        return union;
+    }
+}
+

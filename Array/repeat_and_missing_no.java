@@ -40,3 +40,24 @@ public class Solution {
         return a;
     }
 }
+
+// Array : Find missing number
+// Leetcode : https://leetcode.com/problems/missing-number/
+// Approach-2 : Using linear search
+// Time complexity : O(N)
+// Space complexity : O(1)
+
+class Solution {
+    public int missingNumber(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        int i;
+        
+        for(i=0; i<n; i++)
+        {
+            if(nums[i] != i)
+                break;
+        }
+        return i;
+    }
+}

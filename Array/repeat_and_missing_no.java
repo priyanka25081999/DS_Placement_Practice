@@ -61,3 +61,35 @@ class Solution {
         return i;
     }
 }
+
+// Array : Find missing number
+// GFG : https://practice.geeksforgeeks.org/problems/missing-number4257/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=missing-number
+// Approach-3 : Using temp array
+// Time complexity : O(N)
+// Space complexity : O(N), as we are using temp array to store the elements (i.e extra space)
+
+class Compute {
+    
+    public static int missingNumber(int arr[], int N)
+    {
+        // Your code goes here
+        int temp[] = new int[N+1];
+        
+        // initialize the positions to 0
+        for(int i=0; i<N; i++)
+            temp[i] = 0;
+            
+        // Now, if we find the element in an array, then add 1
+        for(int i=0; i<N-1; i++)
+            temp[arr[i] - 1] = 1;
+        
+        // If the element is not exists then the position holds 0, which is our missing number
+        // So, store it into the ans and return it.
+        int ans=0;
+        for(int i=0; i<N; i++) {
+            if(temp[i] == 0)
+                ans=i+1;
+        }
+        return ans;
+    }
+}

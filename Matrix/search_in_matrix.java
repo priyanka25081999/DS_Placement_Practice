@@ -1,5 +1,6 @@
 // Matrix : Search an element in a 2D matrix
 // https://leetcode.com/problems/search-a-2d-matrix/
+// Approach-1 : Brute force
 // Time complexity : O(N*M) 
 // Space complexity : O(1)
 

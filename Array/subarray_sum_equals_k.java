@@ -1,6 +1,8 @@
 // Array : Subarray sum equals K
 // HashMap approach
 // https://leetcode.com/problems/subarray-sum-equals-k/
+// Time complexity : O(N)
+// Space complexity : O(N), as we are using an extra space to store elements into hashmap
 
 class Solution {
     public int subarraySum(int[] nums, int k) {

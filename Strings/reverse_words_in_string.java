@@ -33,3 +33,31 @@ class Solution {
         return reverse.trim();
     }
 }
+
+// Another approach
+// Time complexity : O(N)
+// Space complexity : O(N) as we are taking an extra space
+
+class Solution {
+    public String reverseWords(String s) {
+        // First trim the spaces and convert multiple spaces into one
+        s = s.trim().replaceAll("\\s+", " ");
+        
+        // then split the string from spaces
+        String str[] = s.split(" ");
+        String result = "";
+        Stack<String> st = new Stack<>();
+        
+        // push strings into the stack
+        for(int i=0; i<str.length; i++)
+            st.push(str[i]);
+        
+        // pop all the strings from stack and add it into the result strings
+        while(!st.empty())
+            result = result + st.pop() + " ";
+        
+        // return except the last space, hence trim it
+        return result.trim();
+    }
+}
+

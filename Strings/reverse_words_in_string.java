@@ -61,3 +61,58 @@ class Solution {
     }
 }
 
+// Trying two pointers approach, working for single space
+// WIP - handling multiple spaces in a string
+
+class Solution {
+    public String reverseWords(String s) {
+        String temp = "";
+        String result = "";
+        int left = 0, right = s.length()-1;
+        
+        while(left <= right) {
+            // get the char
+            char ch = s.charAt(left);
+            
+            if(ch != ' ') {
+                temp = temp + ch;
+            }
+            else if (ch == ' ') {
+                // if ans is empty, then directly add temp into ans
+                // if (result.equals(' ')) {
+                //     continue;
+                // }
+                if(!result.equals("")) {
+                    //result = result.substring(result.length()-1, result.length());
+                    //System.out.println("result= "+ result);
+                    
+                    
+                    result = temp + " " + result;
+                } else {
+
+                    result = temp;
+                    System.out.println("temp = "+ temp);
+                    //result = result.substring(result.length()-1, result.length());
+                    //System.out.println("result= "+ result);
+                }
+                
+                temp = "";
+            }
+            
+            left++;
+        }
+        
+        // Now, let's add last word into the result string (as it is not being addded due to if condition above becomes true and loop ends)
+        
+        if(!temp.equals("")) {
+            if(!result.equals("")) {
+                result = temp + " " + result;
+            }
+            else {
+                result = temp;
+            }
+        }
+        
+        return result;
+    }
+}

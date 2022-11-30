@@ -1,6 +1,6 @@
 // String : Count number of substrings
 // GFG : https://practice.geeksforgeeks.org/problems/count-number-of-substrings4528/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=count-number-of-substrings
-// Approach : HashMap approach
+// Approach : HashMap approach - But getting TLE for some testcases
 // Time complexity : O(N)
 // Space complexity : O(N), as we are using an extra space for hashmap
 

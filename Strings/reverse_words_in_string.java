@@ -63,6 +63,8 @@ class Solution {
 
 // Trying two pointers approach, working for single space
 // WIP - handling multiple spaces in a string
+// Time complexity : O(N)
+// Space complexity : O(1), we are not using extra space here
 
 class Solution {
     public String reverseWords(String s) {

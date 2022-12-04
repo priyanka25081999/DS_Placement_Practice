@@ -31,3 +31,44 @@ class GfG
 	}
 }
 
+/*
+
+DoublyLL : Delete a node in a doubly linkedlist
+GFG : https://practice.geeksforgeeks.org/problems/delete-node-in-doubly-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=delete-node-in-doubly-linked-list
+Time complexity : O(N), where N is the length of doubly linked list
+Space complexity : O(1), extra space is not required
+
+class Solution
+{
+    // function returns the head of the linkedlist
+    Node deleteNode(Node head,int x)
+    {
+	    // Your code here
+	    if(head == null)
+	        return head;
+	    
+	    if(x == 1)
+	    {
+	        head = head.next;
+	        return head;
+	    }
+	    
+	    Node temp = head;
+	    //reach to the target(x) node
+	    while(x > 1) {
+	        temp = temp.next;
+	        x--;
+	    }
+	    
+	    if(temp.next == null)
+	        temp.prev.next = null;
+	    else {
+	        temp.prev.next = temp.next; // prev nodes pointer update
+	        temp.next.prev = temp.prev; // next nodes pointer update
+	    }
+	    
+	    return head;
+    }
+}
+
+*/

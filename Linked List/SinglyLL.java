@@ -182,3 +182,25 @@ class Solution
 
 */
 
+/*
+
+LinkedList : Search in a Linked List
+GFG : https://practice.geeksforgeeks.org/problems/search-in-linked-list-1664434326/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=search-in-linked-list-1664434326
+Time complexity : O(N), we are doing linear search
+Space complexity : O(1), no extra space required
+
+class Solution {
+    static boolean searchKey(int n, Node head, int key) {
+        // Code here
+        for(int i=0; i<n; i++) {
+            if(key == head.data)
+                return true;
+
+            head = head.next;
+        }
+        
+        return false;
+    }
+}
+
+*/

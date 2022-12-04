@@ -154,3 +154,31 @@ class Solution
 }
 
 */
+
+/*
+
+LinkedList : Count nodes of linked list
+GFG : https://practice.geeksforgeeks.org/problems/count-nodes-of-linked-list/0?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=count-nodes-of-linked-list
+Time complexity : O(N), as we are visiting each node at least once
+Space complexity : O(1)
+
+class Solution
+{
+    //Function to count nodes of a linked list.
+    public static int getCount(Node head)
+    {
+        
+        //Code here
+        int cnt=0;
+        while(head!=null)
+        {
+            cnt++;
+            head = head.next;
+        }
+        
+        return cnt;
+    }
+}
+
+*/
+

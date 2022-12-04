@@ -72,3 +72,45 @@ class Solution
 }
 
 */
+
+/*
+
+DoublyLL : Reverse a Doubly Linked List
+GFG : https://practice.geeksforgeeks.org/problems/reverse-a-doubly-linked-list/1?utm_source=youtube&utm_medium=collab_striver_ytdescription&utm_campaign=reverse-a-doubly-linked-list
+Time complexity : O(N)
+Space complexity : O(1), not using any extra space
+
+class Node
+{
+    int data;
+    Node next, prev;
+    Node(int data)
+    {
+        this.data = data;
+        this.next = null;
+        this.prev = null;
+    }
+}
+
+public static Node reverseDLL(Node head)
+{
+    //Your code here
+    Node temp = null;
+    Node curr = head;
+    
+    // change next and prev pointers
+    while(curr!=null) {
+        temp = curr.prev;
+        curr.prev = curr.next;
+        curr.next = temp;
+        curr = curr.prev;
+    }
+    
+    // Edge case if our linked list is empty Or list with only one node or for the last node
+    if(temp!=null) 
+        head = temp.prev;
+
+    return head;
+}
+
+*/

@@ -67,6 +67,9 @@ class Solution {
 */
 
 /* Second approach : Two pointers
+This approach is also called as "Tortoise-Hare-Approach" [Efficient]
+Space complexity : O(N)
+Time complexity : O(1)
 
 class Solution {
     public ListNode middleNode(ListNode head) {

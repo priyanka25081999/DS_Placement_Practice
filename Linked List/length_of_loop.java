@@ -1,6 +1,8 @@
 // LinkedList : Find the length of loop
 // Two pointers solution
 // GFG : https://practice.geeksforgeeks.org/problems/find-length-of-loop/1/?page=2&category[]=Linked%20List&sortBy=submissions#
+// Time complexity : O(N) - in worst case, if we need to visit all nodes which are involved in the loop
+// Space complexity : O(1) - extra space is not required here
 
 class Solution
 {

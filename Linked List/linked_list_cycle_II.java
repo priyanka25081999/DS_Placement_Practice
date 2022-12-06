@@ -2,7 +2,7 @@
 // Leetcode : https://leetcode.com/problems/linked-list-cycle-ii/
 // Fast and slow pointer approach
 // Time complexity : O(N) - Take overall iterations and club them to O(N)
-// Space complexity : No extra data structure is used.
+// Space complexity : O(1) - No extra data structure is used.
 
 /*
 

@@ -31,3 +31,36 @@ class Solution {
         return prev;
     }
 }
+
+// Recursive approach
+// Approach is - We traverse to the end of the list recursively.
+// As we reach the end of the list, we make the end node the head. Then receive previous nodes and make them connected to the last one.
+// At last, we link the second node to the head and the first node to NULL. We return to our new head.
+// Time complexity : O(N)
+// Space complexity : O(1) - Apart from recursion using stack space, no external storage is used. Thus, space complexity is O(1).
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+
+        // last from the last node
+        ListNode nn = reverseList(head.next);
+        // link second node to the head node (image from start - current list here)
+        head.next.next = head;
+        // make the first node null
+        head.next = null;
+
+        return nn;
+    }
+}

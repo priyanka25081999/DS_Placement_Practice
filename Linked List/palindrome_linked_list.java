@@ -1,6 +1,6 @@
 // LinkedList : Palindrome Linked List
 // Leetcode : https://leetcode.com/problems/palindrome-linked-list/
-// Approach-1 - using stack data structures
+// Approach-1 - using stack data structures or we can also use arraylist datastructure and then divide the arraylist in middle and compare both side elements of arraylist
 // Time complexity - O(N) - Iterating through the list to store elements in the array.
 // Space complexity - O(N) - Using a stack to store the list elements for further checking.
 

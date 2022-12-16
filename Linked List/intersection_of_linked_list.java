@@ -82,7 +82,7 @@ public class Solution {
 
 // Approach-3 : Optimized
 // Take two dummy nodes for each list. Point each to the head of the lists.
-// Iterate over them. If anyone becomes null, point them to the head of the opposite lists and continue iterating until they collide.
+// Iterate over them. If anyone becomes null, point them to the head of the opposite lists and continue iterating until they collide or reach to the last (null) node
 // Time complexity : O(n)
 // Space complexity : O(1)
 

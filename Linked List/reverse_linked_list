@@ -39,16 +39,6 @@ class Solution {
 // Time complexity : O(N)
 // Space complexity : O(1) - Apart from recursion using stack space, no external storage is used. Thus, space complexity is O(1).
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
 class Solution {
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null)

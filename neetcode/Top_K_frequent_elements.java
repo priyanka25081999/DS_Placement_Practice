@@ -3,6 +3,8 @@
 // create a hashmap and store the count of array element
 // Now, sort the hashmap values using priority queue
 // Finally add keys to the hashmap and return the top K keys
+// Time complexity - Overall, the time complexity is dominated by the construction of the PriorityQueue, so the time complexity is O(n * log(k)).
+// Space complexity - Overall, the space complexity is O(n + k).
 
 class Solution {
     public int[] topKFrequent(int[] nums, int k) {
